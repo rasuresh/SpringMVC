@@ -34,7 +34,7 @@ public class UserService {
 		}
 	}
 	
-	@Transactional(readOnly=true)
+	@Transactional(readOnly=false)
 	public void updateUser2(){
 		
 		try{
