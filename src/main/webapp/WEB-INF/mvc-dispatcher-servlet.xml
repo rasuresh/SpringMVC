@@ -1,36 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
-	<bean id="localeResolver"
-	class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
-	<property name="defaultLocale" value="en" />
-	</bean>
-	<bean id="localeChangeInterceptor"
-	class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
-	<property name="paramName" value="lang" />
-	</bean>
-	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
-	<property name="interceptors">
-	<list>
-	<ref bean="localeChangeInterceptor" />
-	</list>
-	</property>
-	</bean>
-	<bean class="com.mkyong.common.controller.WelcomeController" />
-	<bean id="messageSource"
-	class="org.springframework.context.support.ResourceBundleMessageSource">
-	<property name="basename" value="welcome" />
-	</bean>
-	<bean id="viewResolver"
-	class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
-	<property name="prefix">
-	<value>/WEB-INF/pages/</value>
-	</property>
-	<property name="suffix">
-	<value>.jsp</value>
-	</property>
-	</bean>
-	</beans>
--->
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
@@ -44,10 +12,8 @@
 				http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
 				http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 				
-
-	<context:component-scan base-package="com.acuvue" />
+	<context:component-scan base-package="com.suresh" />
 	<context:annotation-config />
-
 	<bean id="urlMapping"
 		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
 		<property name="interceptors">
@@ -68,9 +34,9 @@
 	</bean>
 
 	<bean id="loginController"
-		class="com.acuvue.web.controller.LoginController">
+		class="com.suresh.web.controller.LoginController">
 		<property name="validator">
-			<bean class="com.acuvue.web.forms.LoginValidator" />
+			<bean class="com.suresh.web.forms.LoginValidator" />
 		</property>
 	</bean>
 
@@ -135,7 +101,7 @@
  
  <aop:config>
     <aop:pointcut id="serviceOperation"
-          expression="execution(* com.acuvue.service.UserService.*(..))"/>
+          expression="execution(* com.suresh.service.UserService.*(..))"/>
     <aop:advisor pointcut-ref="serviceOperation" advice-ref="defaultTxAdvice"/>
   </aop:config>
  -->
@@ -151,18 +117,18 @@
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
 		<bean id="registerController"
-			class="com.acuvue.web.controller.RegisterController">
+			class="com.suresh.web.controller.RegisterController">
 			<property name="userService" ref="service" />
 		</bean>
 
-		<bean id="templateDao" class="com.acuvue.dao.UserDAO">
+		<bean id="templateDao" class="com.suresh.dao.UserDAO">
 			<property name="sessionFactory" ref="mySessionFactory" />
 		</bean>
-		<bean id="plainDAO" class="com.acuvue.dao.UserDAO2">
+		<bean id="plainDAO" class="com.suresh.dao.UserDAO2">
 			<property name="sessionFactory" ref="mySessionFactory" />
 		</bean>
 
-		<bean id="service" class="com.acuvue.service.UserService">
+		<bean id="service" class="com.suresh.service.UserService">
 			<property name="dao" ref="templateDao" />
 			<property name="dao2" ref="plainDAO" />
 		</bean>

@@ -17,7 +17,7 @@
 </style>
 </head>
 <body>
-	<h1>FTPC Landing page.</h1>
+	<h1>Login</h1>
 <br />
 <form:form method="POST" commandName="loginform">
 	<table>
@@ -38,7 +38,7 @@
 			<td />
 		</tr>
 		<tr>
-			<td> <a href="/FTPC/register.htm"> New User? Click here.</a> </td>
+			<td> <a href="/SpringMVC/register/user.htm"> New User? Click here.</a> </td>
 		</tr>
 		
 	</table>
