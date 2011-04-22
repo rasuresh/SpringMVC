@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+  
+<hibernate-mapping>
+	<class name="com.acuvue.pdo.User" 
+		table="USERS" lazy="false">
+		<id name="userId" type="java.lang.Integer" column="USER_ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_USER</param>
+			</generator>
+		</id>
+		<property name="firstName" type="java.lang.String" column="FIRST_NAME"
+			length="150" />
+		<property name="lastName" type="java.lang.String" column="LAST_NAME"
+			length="150" />
+		<property name="gender" type="java.lang.String" column="GENDER"
+			length="1" />
+		<property name="dob" type="java.sql.Timestamp" column="DOB"
+			length="7" />
+
+		<!-- Associations -->
+	</class>
+</hibernate-mapping>
