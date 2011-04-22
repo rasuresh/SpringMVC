@@ -11,9 +11,7 @@ public class RegisterValidator  implements Validator{
 	}
 	public void validate(Object arg0, Errors errors) {
 		RegisterForm lForm = (RegisterForm)arg0;
-		System.out.println("Validator invoked...");
+		System.out.println("RegisterValidator validator invoked...");
 		ValidationUtils.rejectIfEmpty(errors, "emailAddress", "missing.email");
-		ValidationUtils.rejectIfEmpty(errors, "password", "missing.password");
-		
 	}
 }

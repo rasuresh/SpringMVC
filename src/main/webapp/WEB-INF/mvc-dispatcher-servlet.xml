@@ -52,6 +52,7 @@
 		</property>
 	</bean>
 	
+	<bean id="validator" class="com.suresh.web.forms.RegisterValidator" />
 	
 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
 	p:locations = "classpath:/application.properties"  />

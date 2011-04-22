@@ -13,9 +13,7 @@ public class LoginValidator  implements Validator{
 		LoginForm lForm = (LoginForm)arg0;
 		System.out.println("Validator invoked...");
 		ValidationUtils.rejectIfEmpty(errors, "emailAddress", "missing.email");
-		ValidationUtils.rejectIfEmpty(errors, "emailAddress2", "missing.email");
 		ValidationUtils.rejectIfEmpty(errors, "password", "missing.password");
-		
 		/*if( lForm.getPassword()!= null && lForm.getPassword().length() < 6){
 			errors.rejectValue("password", "invalid.password");
 		}*/
