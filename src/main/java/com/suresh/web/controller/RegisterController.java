@@ -41,7 +41,7 @@ public class RegisterController {
 		stateList.add(new State(3, "Washington"));
 		return stateList;
 	}
-
+	
 	@RequestMapping( value="**/user", method = RequestMethod.GET)
 	public String displayForm(ModelMap model, @RequestParam(value="locale", required=false) String locale, @RequestHeader("Host") String host ){
 		System.out.println("Request locale:	" + locale);

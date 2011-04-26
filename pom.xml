@@ -105,24 +105,6 @@
 					<target>1.5</target>
 				</configuration>
 			</plugin>
-			<!-- 
-				<plugin>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<executions>
-				<execution>
-				<phase>deploy</phase>
-				<configuration>
-				<tasks>
-				<copy file="${war.location}/SpringMVC.war" todir="${deployment.location}" />
-				</tasks>
-				</configuration>
-				<goals>
-				<goal>run</goal>
-				</goals>
-				</execution>
-				</executions>
-				</plugin>
-			-->
 		</plugins>
 	</build>
 </project>
