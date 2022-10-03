@@ -15,6 +15,7 @@ public class UserService {
 
 	private UserDAO dao;
 	private UserDAO2 dao2;
+	private String status;
 
 	public UserDAO getDao() {
 		return dao;
